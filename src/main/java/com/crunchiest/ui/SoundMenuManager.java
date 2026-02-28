@@ -132,7 +132,7 @@ public class SoundMenuManager
     if (session == null || !jukeboxService.hasLocationKey(session.getLocationKey()))
     {
       player.closeInventory();
-      Messages.send(player, "<red>That custom jukebox is no longer valid.</red>");
+      Messages.send(player, "<red>That custom note block is no longer valid.</red>");
       return;
     }
 

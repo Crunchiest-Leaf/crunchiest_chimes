@@ -8,7 +8,7 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 import com.crunchiest.service.RedstonePlaybackService;
 
 /**
- * Routes redstone updates on jukebox blocks to the playback service.
+ * Routes redstone updates on note blocks to the playback service.
  */
 public class JukeboxRedstoneListener implements Listener
 {
@@ -25,14 +25,14 @@ public class JukeboxRedstoneListener implements Listener
   }
 
   /**
-   * Handles redstone state changes on jukebox blocks.
+   * Handles redstone state changes on note blocks.
    *
    * @param event redstone event
    */
   @EventHandler
   public void onJukeboxRedstone(BlockRedstoneEvent event)
   {
-    if (event.getBlock().getType() != Material.JUKEBOX)
+    if (event.getBlock().getType() != Material.NOTE_BLOCK)
     {
       return;
     }

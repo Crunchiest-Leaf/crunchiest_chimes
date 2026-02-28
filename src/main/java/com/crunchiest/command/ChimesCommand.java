@@ -76,15 +76,15 @@ public class ChimesCommand implements CommandExecutor
     Player player=(Player) sender;
     // Command targeting is line-of-sight based to avoid additional arguments.
     Block targetBlock=player.getTargetBlockExact(6);
-    if (targetBlock == null || targetBlock.getType() != Material.JUKEBOX)
+    if (targetBlock == null || targetBlock.getType() != Material.NOTE_BLOCK)
     {
-      Messages.send(player, "<yellow>Look at a custom jukebox and run /chimes.</yellow>");
+      Messages.send(player, "<yellow>Look at a custom note block and run /chimes.</yellow>");
       return true;
     }
 
     if (!jukeboxService.isCustomJukebox(targetBlock.getLocation()))
     {
-      Messages.send(player, "<yellow>That jukebox is not a custom CrunchiestChimes jukebox.</yellow>");
+      Messages.send(player, "<yellow>That note block is not a custom CrunchiestChimes note block.</yellow>");
       return true;
     }
 

@@ -3,15 +3,21 @@ package com.crunchiest;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
+import org.bukkit.NamespacedKey;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.crunchiest.command.ChimesCommand;
+import com.crunchiest.items.ItemFactory;
+import com.crunchiest.listener.CustomCraftingListener;
 import com.crunchiest.listener.JukeboxInteractionListener;
 import com.crunchiest.listener.JukeboxLifecycleListener;
+import com.crunchiest.listener.JukeboxPistonListener;
 import com.crunchiest.listener.JukeboxRedstoneListener;
 import com.crunchiest.listener.MenuListener;
+import com.crunchiest.recipes.listenerRecipes.CustomRecipeBuilder;
+import com.crunchiest.recipes.listenerRecipes.CustomRecipeRegistry;
 import com.crunchiest.service.CustomJukeboxService;
 import com.crunchiest.service.RedstonePlaybackService;
 import com.crunchiest.storage.SqliteJukeboxRepository;
@@ -22,6 +28,7 @@ import com.crunchiest.ui.SoundMenuManager;
  */
 public class CrunchiestChimes extends JavaPlugin
 {
+  private NamespacedKey pluginDefaultKey;
   private SqliteJukeboxRepository repository;
   private CustomJukeboxService jukeboxService;
 
@@ -32,6 +39,10 @@ public class CrunchiestChimes extends JavaPlugin
   public void onEnable()
   {
     saveDefaultConfig();
+    pluginDefaultKey=new NamespacedKey(this, "custom_item");
+    ItemFactory.initialize(this);
+    CustomRecipeBuilder.initialize(this);
+    CustomRecipeRegistry.registerAllRecipes();
 
     try
     {
@@ -58,9 +69,11 @@ public class CrunchiestChimes extends JavaPlugin
 
     PluginManager pluginManager=getServer().getPluginManager();
     pluginManager.registerEvents(new JukeboxLifecycleListener(jukeboxService), this);
-    pluginManager.registerEvents(new JukeboxInteractionListener(jukeboxService, soundMenuManager), this);
+    pluginManager.registerEvents(new JukeboxPistonListener(jukeboxService), this);
+    pluginManager.registerEvents(new JukeboxInteractionListener(jukeboxService, redstonePlaybackService, soundMenuManager), this);
     pluginManager.registerEvents(new JukeboxRedstoneListener(redstonePlaybackService), this);
     pluginManager.registerEvents(new MenuListener(soundMenuManager), this);
+    pluginManager.registerEvents(new CustomCraftingListener(), this);
     getLogger().info("crunchiest_chimes enabled");
   }
 
@@ -70,6 +83,8 @@ public class CrunchiestChimes extends JavaPlugin
   @Override
   public void onDisable()
   {
+    CustomRecipeRegistry.unregisterAllRecipes();
+
     if (jukeboxService != null)
     {
       jukeboxService.shutdown();
@@ -80,5 +95,15 @@ public class CrunchiestChimes extends JavaPlugin
       repository.close();
     }
     getLogger().info("crunchiest_chimes disabled");
+  }
+
+  /**
+   * Returns the default plugin key used for item PDC tagging.
+   *
+   * @return plugin-scoped data key
+   */
+  public NamespacedKey getPluginDefaultKey()
+  {
+    return pluginDefaultKey;
   }
 }

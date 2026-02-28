@@ -1,4 +1,4 @@
-# Global fallback sound when a custom jukebox has no selected sound.
+# Global fallback sound when a custom note block has no selected sound.
 default-sound: "minecraft:block.note_block.pling"
 
 playback:
@@ -8,8 +8,21 @@ playback:
 # Optional item icons for category buttons (must be valid Material names).
 category-icons:
   water: WATER_BUCKET
-  animal: BEEF
   machinery: PISTON
+  weather: LIGHTNING_ROD
+  ambience: AMETHYST_SHARD
+  magic: ENCHANTING_TABLE
+  village: BELL
+  caves: POINTED_DRIPSTONE
+  nether: NETHERRACK
+  sculk: SCULK_SENSOR
+  combat: IRON_SWORD
+  redstone: REDSTONE
+  music: NOTE_BLOCK
+  creatures_passive: HAY_BLOCK
+  creatures_hostile: ZOMBIE_HEAD
+  creatures_aquatic: HEART_OF_THE_SEA
+  creatures_utility_boss: TOTEM_OF_UNDYING
 
 # Sound categories shown in the selection UI.
 sounds:
@@ -17,11 +30,164 @@ sounds:
   - "minecraft:block.bubble_column.upwards_ambient"
   - "minecraft:block.water.ambient"
   - "minecraft:entity.dolphin.play"
-  animal:
-  - "minecraft:entity.cow.ambient"
-  - "minecraft:entity.wolf.howl"
-  - "minecraft:entity.frog.ambient"
+  - "minecraft:entity.turtle.ambient_land"
+  - "minecraft:entity.fishing_bobber.splash"
+  - "minecraft:ambient.underwater.loop"
   machinery:
   - "minecraft:block.piston.extend"
   - "minecraft:block.piston.contract"
   - "minecraft:block.conduit.activate"
+  - "minecraft:block.dispenser.dispense"
+  - "minecraft:block.dropper.drop"
+  - "minecraft:block.anvil.use"
+  weather:
+  - "minecraft:weather.rain"
+  - "minecraft:entity.lightning_bolt.thunder"
+  - "minecraft:entity.lightning_bolt.impact"
+  - "minecraft:block.fire.ambient"
+  - "minecraft:block.fire.extinguish"
+  - "minecraft:ambient.cave"
+  ambience:
+  - "minecraft:ambient.cave"
+  - "minecraft:ambient.nether_wastes.loop"
+  - "minecraft:ambient.crimson_forest.loop"
+  - "minecraft:ambient.warped_forest.loop"
+  - "minecraft:ambient.soul_sand_valley.loop"
+  - "minecraft:block.amethyst_block.chime"
+  magic:
+  - "minecraft:block.enchantment_table.use"
+  - "minecraft:entity.evoker.cast_spell"
+  - "minecraft:entity.evoker.prepare_attack"
+  - "minecraft:entity.evoker.prepare_summon"
+  - "minecraft:entity.enderman.ambient"
+  - "minecraft:entity.enderman.teleport"
+  village:
+  - "minecraft:entity.villager.ambient"
+  - "minecraft:entity.villager.yes"
+  - "minecraft:entity.villager.no"
+  - "minecraft:block.bell.use"
+  - "minecraft:entity.iron_golem.repair"
+  - "minecraft:entity.cat.purr"
+  caves:
+  - "minecraft:ambient.cave"
+  - "minecraft:entity.bat.ambient"
+  - "minecraft:block.pointed_dripstone.drip_water"
+  - "minecraft:block.sculk_sensor.clicking"
+  - "minecraft:block.amethyst_block.resonate"
+  - "minecraft:block.amethyst_block.chime"
+  nether:
+  - "minecraft:entity.ghast.ambient"
+  - "minecraft:entity.blaze.ambient"
+  - "minecraft:entity.strider.ambient"
+  - "minecraft:entity.zombified_piglin.ambient"
+  - "minecraft:ambient.nether_wastes.loop"
+  - "minecraft:block.lava.ambient"
+  sculk:
+  - "minecraft:block.sculk_sensor.clicking"
+  - "minecraft:block.sculk_sensor.clicking_stop"
+  - "minecraft:block.sculk_shrieker.shriek"
+  - "minecraft:entity.warden.heartbeat"
+  - "minecraft:entity.warden.ambient"
+  - "minecraft:entity.warden.nearby_close"
+  combat:
+  - "minecraft:entity.player.attack.strong"
+  - "minecraft:entity.player.attack.crit"
+  - "minecraft:entity.arrow.hit_player"
+  - "minecraft:item.shield.block"
+  - "minecraft:entity.skeleton.shoot"
+  - "minecraft:entity.zombie.attack_iron_door"
+  redstone:
+  - "minecraft:block.lever.click"
+  - "minecraft:block.stone_button.click_on"
+  - "minecraft:block.stone_button.click_off"
+  - "minecraft:block.comparator.click"
+  - "minecraft:block.repeater.click"
+  - "minecraft:block.redstone_torch.burnout"
+  music:
+  - "minecraft:block.note_block.banjo"
+  - "minecraft:block.note_block.basedrum"
+  - "minecraft:block.note_block.bell"
+  - "minecraft:block.note_block.bit"
+  - "minecraft:block.note_block.chime"
+  - "minecraft:block.note_block.flute"
+  creatures_passive:
+  - "minecraft:entity.allay.ambient_without_item"
+  - "minecraft:entity.armadillo.ambient"
+  - "minecraft:entity.axolotl.idle_air"
+  - "minecraft:entity.bat.ambient"
+  - "minecraft:entity.bee.loop"
+  - "minecraft:entity.camel.ambient"
+  - "minecraft:entity.cat.ambient"
+  - "minecraft:entity.chicken.ambient"
+  - "minecraft:entity.cow.ambient"
+  - "minecraft:entity.donkey.ambient"
+  - "minecraft:entity.fox.ambient"
+  - "minecraft:entity.frog.ambient"
+  - "minecraft:entity.goat.ambient"
+  - "minecraft:entity.horse.ambient"
+  - "minecraft:entity.llama.ambient"
+  - "minecraft:entity.mooshroom.convert"
+  - "minecraft:entity.mule.ambient"
+  - "minecraft:entity.ocelot.ambient"
+  - "minecraft:entity.panda.ambient"
+  - "minecraft:entity.parrot.ambient"
+  - "minecraft:entity.pig.ambient"
+  - "minecraft:entity.rabbit.ambient"
+  - "minecraft:entity.sheep.ambient"
+  - "minecraft:entity.sniffer.idle"
+  - "minecraft:entity.turtle.ambient_land"
+  - "minecraft:entity.villager.ambient"
+  - "minecraft:entity.wandering_trader.ambient"
+  - "minecraft:entity.wolf.ambient"
+  creatures_aquatic:
+  - "minecraft:entity.cod.ambient"
+  - "minecraft:entity.dolphin.ambient"
+  - "minecraft:entity.drowned.ambient_water"
+  - "minecraft:entity.elder_guardian.ambient"
+  - "minecraft:entity.glow_squid.ambient"
+  - "minecraft:entity.guardian.ambient"
+  - "minecraft:entity.puffer_fish.ambient"
+  - "minecraft:entity.salmon.ambient"
+  - "minecraft:entity.squid.ambient"
+  - "minecraft:entity.tropical_fish.ambient"
+  - "minecraft:entity.turtle.ambient_water"
+  creatures_hostile:
+  - "minecraft:entity.blaze.ambient"
+  - "minecraft:entity.bogged.ambient"
+  - "minecraft:entity.breeze.idle_ground"
+  - "minecraft:entity.cave_spider.ambient"
+  - "minecraft:entity.creeper.primed"
+  - "minecraft:entity.enderman.ambient"
+  - "minecraft:entity.endermite.ambient"
+  - "minecraft:entity.evoker.ambient"
+  - "minecraft:entity.ghast.ambient"
+  - "minecraft:entity.hoglin.ambient"
+  - "minecraft:entity.husk.ambient"
+  - "minecraft:entity.magma_cube.squish"
+  - "minecraft:entity.phantom.ambient"
+  - "minecraft:entity.piglin.ambient"
+  - "minecraft:entity.piglin_brute.ambient"
+  - "minecraft:entity.pillager.ambient"
+  - "minecraft:entity.ravager.ambient"
+  - "minecraft:entity.shulker.ambient"
+  - "minecraft:entity.silverfish.ambient"
+  - "minecraft:entity.skeleton.ambient"
+  - "minecraft:entity.slime.squish"
+  - "minecraft:entity.spider.ambient"
+  - "minecraft:entity.stray.ambient"
+  - "minecraft:entity.vex.ambient"
+  - "minecraft:entity.vindicator.ambient"
+  - "minecraft:entity.warden.ambient"
+  - "minecraft:entity.witch.ambient"
+  - "minecraft:entity.wither.ambient"
+  - "minecraft:entity.wither_skeleton.ambient"
+  - "minecraft:entity.zoglin.ambient"
+  - "minecraft:entity.zombie.ambient"
+  - "minecraft:entity.zombie_villager.ambient"
+  - "minecraft:entity.zombified_piglin.ambient"
+  creatures_utility_boss:
+  - "minecraft:entity.ender_dragon.ambient"
+  - "minecraft:entity.iron_golem.repair"
+  - "minecraft:entity.snow_golem.ambient"
+  - "minecraft:entity.skeleton_horse.ambient"
+  - "minecraft:entity.zombie_horse.ambient"

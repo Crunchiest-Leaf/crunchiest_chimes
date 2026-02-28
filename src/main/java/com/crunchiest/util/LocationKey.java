@@ -4,7 +4,7 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 /**
- * Immutable world-coordinate key used to identify custom jukebox locations.
+ * Immutable world-coordinate key used to identify custom note block locations.
  */
 public final class LocationKey
 {

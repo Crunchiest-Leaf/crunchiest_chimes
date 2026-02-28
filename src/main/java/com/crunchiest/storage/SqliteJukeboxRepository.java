@@ -14,7 +14,7 @@ import com.crunchiest.CrunchiestChimes;
 import com.crunchiest.util.LocationKey;
 
 /**
- * SQLite-backed repository for persistent custom jukebox sound selections.
+ * SQLite-backed repository for persistent custom note block sound selections.
  */
 public class SqliteJukeboxRepository
 {
@@ -65,7 +65,7 @@ public class SqliteJukeboxRepository
   }
 
   /**
-   * Inserts a jukebox record when it does not exist.
+   * Inserts a note block record when it does not exist.
    *
    * @param key location key
    * @throws SQLException if insertion fails
@@ -84,7 +84,7 @@ public class SqliteJukeboxRepository
   }
 
   /**
-   * Removes a jukebox record.
+   * Removes a note block record.
    *
    * @param key location key
    * @throws SQLException if deletion fails
@@ -103,7 +103,7 @@ public class SqliteJukeboxRepository
   }
 
   /**
-   * Updates selected sound for a jukebox record.
+   * Updates selected sound for a note block record.
    *
    * @param key location key
    * @param sound selected sound key
@@ -124,7 +124,7 @@ public class SqliteJukeboxRepository
   }
 
   /**
-   * Loads all jukebox records into a map keyed by serialized location.
+   * Loads all tracked note block records into a map keyed by serialized location.
    *
    * @return location-to-sound map
    * @throws SQLException if query fails

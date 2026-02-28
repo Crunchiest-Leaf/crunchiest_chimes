@@ -19,7 +19,7 @@ import com.crunchiest.storage.SqliteJukeboxRepository;
 import com.crunchiest.util.LocationKey;
 
 /**
- * In-memory jukebox state service with asynchronous SQLite persistence.
+ * In-memory note block state service with asynchronous SQLite persistence.
  */
 public class CustomJukeboxService
 {
@@ -39,7 +39,7 @@ public class CustomJukeboxService
   private volatile long lastRejectedLogTimeMs;
 
   /**
-   * Creates the service and loads persisted jukebox state.
+   * Creates the service and loads persisted note block state.
    *
    * @param plugin owning plugin
    * @param repository SQLite repository
@@ -57,9 +57,9 @@ public class CustomJukeboxService
   }
 
   /**
-   * Registers a newly placed custom jukebox.
+   * Registers a newly placed custom note block.
    *
-   * @param location jukebox location
+   * @param location note block location
    */
   public void registerJukebox(Location location)
   {
@@ -77,9 +77,9 @@ public class CustomJukeboxService
   }
 
   /**
-   * Unregisters a broken custom jukebox.
+   * Unregisters a broken custom note block.
    *
-   * @param location jukebox location
+   * @param location note block location
    */
   public void unregisterJukebox(Location location)
   {
@@ -92,7 +92,7 @@ public class CustomJukeboxService
   }
 
   /**
-   * Checks whether a location is a managed custom jukebox.
+   * Checks whether a location is a managed custom note block.
    *
    * @param location block location
    * @return true when managed
@@ -125,7 +125,7 @@ public class CustomJukeboxService
   }
 
   /**
-   * Sets selected sound for a managed jukebox and queues persistence.
+   * Sets selected sound for a managed note block and queues persistence.
    *
    * @param locationKey serialized location key
    * @param soundName selected sound key
@@ -139,7 +139,7 @@ public class CustomJukeboxService
   }
 
   /**
-   * Gets selected sound for a managed jukebox.
+   * Gets selected sound for a managed note block.
    *
    * @param locationKey serialized location key
    * @return selected sound or empty string

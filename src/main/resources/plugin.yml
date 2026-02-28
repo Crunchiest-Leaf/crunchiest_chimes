@@ -2,11 +2,11 @@ name: CrunchiestChimes
 main: com.crunchiest.CrunchiestChimes
 version: 0.0.1
 api-version: 1.21
-description: Custom redstone-triggered jukebox sounds with category UI
+description: Custom redstone-triggered note block sounds with category UI
 
 commands:
   chimes:
-    description: Opens the custom jukebox sound selector (look at a custom jukebox)
+    description: Opens the custom note block sound selector (look at a custom note block)
     usage: /chimes [reload]
     permission: crunchiestchimes.use
 
