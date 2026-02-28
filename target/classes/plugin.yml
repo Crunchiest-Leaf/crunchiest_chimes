@@ -1,0 +1,19 @@
+name: CrunchiestChimes
+main: com.crunchiest.CrunchiestChimes
+version: 0.0.1
+api-version: 1.21
+description: Custom redstone-triggered jukebox sounds with category UI
+
+commands:
+  chimes:
+    description: Opens the custom jukebox sound selector (look at a custom jukebox)
+    usage: /chimes [reload]
+    permission: crunchiestchimes.use
+
+permissions:
+  crunchiestchimes.use:
+    description: Allows using the CrunchiestChimes UI
+    default: true
+  crunchiestchimes.reload:
+    description: Allows reloading CrunchiestChimes config
+    default: op

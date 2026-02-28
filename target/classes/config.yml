@@ -1,0 +1,27 @@
+# Global fallback sound when a custom jukebox has no selected sound.
+default-sound: "minecraft:block.note_block.pling"
+
+playback:
+  volume: 1.0
+  pitch: 1.0
+
+# Optional item icons for category buttons (must be valid Material names).
+category-icons:
+  water: WATER_BUCKET
+  animal: BEEF
+  machinery: PISTON
+
+# Sound categories shown in the selection UI.
+sounds:
+  water:
+  - "minecraft:block.bubble_column.upwards_ambient"
+  - "minecraft:block.water.ambient"
+  - "minecraft:entity.dolphin.play"
+  animal:
+  - "minecraft:entity.cow.ambient"
+  - "minecraft:entity.wolf.howl"
+  - "minecraft:entity.frog.ambient"
+  machinery:
+  - "minecraft:block.piston.extend"
+  - "minecraft:block.piston.contract"
+  - "minecraft:block.conduit.activate"
