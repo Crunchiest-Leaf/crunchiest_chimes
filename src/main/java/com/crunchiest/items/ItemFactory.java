@@ -1,3 +1,6 @@
+/**
+ * @author Crunchiest-Leaf
+ */
 package com.crunchiest.items;
 
 import java.util.Arrays;

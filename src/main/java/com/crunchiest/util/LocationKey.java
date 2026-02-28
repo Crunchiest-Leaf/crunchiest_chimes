@@ -1,3 +1,6 @@
+/**
+ * @author Crunchiest-Leaf
+ */
 package com.crunchiest.util;
 
 import org.bukkit.Location;

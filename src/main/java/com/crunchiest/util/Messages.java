@@ -1,3 +1,6 @@
+/**
+ * @author Crunchiest-Leaf
+ */
 package com.crunchiest.util;
 
 import net.kyori.adventure.audience.Audience;

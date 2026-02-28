@@ -1,3 +1,6 @@
+/**
+ * @author Crunchiest-Leaf
+ */
 package com.crunchiest.recipes.recipeBook;
 
 import org.bukkit.Material;
