@@ -1,0 +1,40 @@
+# Maven
+/target/
+
+# Build artifacts
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+/.idea/
+*.iml
+/.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+
+# Temporary/runtime files
+*.tmp
+*.swp
+
+# Optional shaded pom output
+/dependency-reduced-pom.xml
+
+# Local plugin data (if generated in repo during testing)
+/plugins/
